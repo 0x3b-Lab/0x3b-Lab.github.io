@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Paths — 0x3B</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS base -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- CSS vistas de listado -->
+    <link rel="stylesheet" href="css/paths.css">
+</head>
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header id="navbar-placeholder"></header>
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+    <main>
+        <div class="layout">
+
+            <!-- =========================
+                 LIST HEADER
+            ========================== -->
+            <section class="list-header">
+                <h1>Paths formativos</h1>
+                <p>
+                    Rutas de aprendizaje progresivo orientadas a fundamentos y práctica.
+                </p>
+            </section>
+
+            <!-- =========================
+                 LIST SEARCH
+            ========================== -->
+            <section class="list-search">
+                <input
+                    type="text"
+                    id="searchPathInput"
+                    placeholder="Buscar paths..."
+                    autocomplete="off"
+                >
+            </section>
+
+            <!-- =========================
+                 LIST GRID
+            ========================== -->
+            <section class="list-content">
+                <div id="pathsGrid" class="list-grid">
+                    <!--
+                      paths.js renderiza aquí:
+                      .path-card
+                    -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- =========================
+         JS
+    ========================== -->
+    <script src="js/component_loader.js"></script>
+    <script src="js/paths.js"></script>
+
+</body>
+</html>

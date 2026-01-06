@@ -1,0 +1,144 @@
+/* =========================
+   GRAPH — 0x3B
+========================= */
+
+/* Contenedor general de la sección */
+#graph-section {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+/* Hero / encabezado del grafo */
+#graph-hero {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+#graph-hero h1 {
+    font-size: 2rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+#graph-hero p {
+    color: #9a9a9a;
+    margin-top: 0rem;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   GRAPH CONTAINER
+========================= */
+
+#graph {
+    width: 100%;
+    height: 70vh;
+
+    background-color: #0a0a0a;
+    border: 1px solid #1f1f1f;
+    border-radius: 6px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow sutil interno */
+#graph::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    box-shadow:
+        inset 0 0 00px rgba(0, 255, 180, 0.04),
+        inset 0 0 00px rgba(0, 0, 0, 0.9);
+}
+
+/* =========================
+   VIS NETWORK OVERRIDES
+========================= */
+
+/* Cursor más “táctico” */
+.vis-network {
+    cursor: grab;
+}
+
+.vis-network:active {
+    cursor: grabbing;
+}
+
+/* Tooltip nativo de vis */
+.vis-tooltip {
+    background-color: #0e0e0e;
+    color: #e5e5e5;
+
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+
+    box-shadow:
+        0 0 12px rgba(0, 0, 0, 0.8),
+        0 0 6px rgba(0, 255, 180, 0.15);
+}
+
+/* =========================
+   FUTUROS COMPONENTES
+========================= */
+
+/* Leyenda (no usada aún, pero lista) */
+.graph-legend {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.graph-legend .item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.graph-legend .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00ffb4;
+}
+
+/* Panel lateral futuro */
+.graph-panel {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    width: 260px;
+    background-color: #0e0e0e;
+
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+
+    padding: 1rem;
+    font-size: 0.85rem;
+
+    color: #ccc;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    #graph {
+        height: 60vh;
+    }
+
+    #graph-hero h1 {
+        font-size: 1.8rem;
+    }
+}

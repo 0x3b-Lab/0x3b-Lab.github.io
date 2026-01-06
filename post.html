@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Post — 0x3B</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS global -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/post.css">
+<link rel="stylesheet" href="css/content.css">
+</head>
+<body>
+
+    <!-- =========================
+         NAVBAR (componente externo)
+    ========================== -->
+    <header id="navbar-placeholder"></header>
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+    <main>
+
+        <!-- =========================
+             HEADER DEL POST    
+        ========================== -->
+        <section id="post-header">
+            <h1 id="post-title">Cargando post...</h1>
+        </section>
+
+        <!-- =========================
+             CONTENIDO DEL POST
+        ========================== -->
+        <section id="post-body">
+            <article id="post-content">
+                <!--
+                post.js renderiza acá el Markdown
+                -->
+            </article>
+        </section>
+
+    </main>
+
+    <!-- =========================
+         FOOTER (componente externo)
+    ========================== -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- =========================
+         JS
+    ========================== -->
+    <!-- Loader de componentes -->
+    <script src="js/component_loader.js"></script>
+
+    <!-- Lógica del post -->
+<script type="module" src="js/post.js"></script>
+
+</body>
+</html>

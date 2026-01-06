@@ -1,0 +1,23 @@
+/* =========================
+   POST LAYOUT
+========================= */
+
+#post-header {
+    max-width: 960px;
+    margin: 3rem auto 2rem;
+    padding: 0 1.5rem;
+}
+
+#post-header h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin: 0;
+    color: #ffffff;
+    border-left: 5px solid #ff003c;
+    padding-left: 1rem;
+}
+
+/* Contenedor general */
+#post-body {
+    margin-bottom: 4rem;
+}

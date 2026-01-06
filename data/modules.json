@@ -1,0 +1,43 @@
+[
+  {
+    "id": "linux-fundamentals",
+    "title": "Fundamentos de Linux",
+    "image": "",
+    "description": "Bases necesarias para sobrevivir en cualquier sistema *nix",
+    "posts": [
+      { "id": "permisos-linux", "order": 1 },
+      { "id": "bash-linux", "order": 2 }
+    ]
+  },
+  {
+    "id": "networking-basics",
+    "title": "Networking Básico",
+    "image": "",
+    "description": "Conceptos esenciales de redes, protocolos y comunicación entre sistemas.",
+    "posts": [
+      { "id": "modelo-osi", "order": 1 },
+      { "id": "tcp-ip", "order": 2 }
+    ]
+  },
+  {
+    "id": "web-fundamentals",
+    "title": "Fundamentos Web",
+    "image": "",
+    "description": "Cómo funciona la web desde adentro: HTTP, navegadores, servidores y estructura.",
+    "posts": [
+      { "id": "http-basics", "order": 1 },
+      { "id": "cookies-sessions", "order": 2 }
+    ]
+  },
+  {
+    "id": "security-intro",
+    "title": "Introducción a Seguridad",
+    "image": "",
+    "description": "Principios básicos de seguridad informática, threat models y superficies de ataque.",
+    "posts": [
+      { "id": "cia-triad", "order": 1 },
+      { "id": "attack-surface", "order": 2 },
+      { "id": "threat-modeling", "order": 3 }
+    ]
+  }
+]

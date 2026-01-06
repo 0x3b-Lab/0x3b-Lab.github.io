@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Modulos — 0x3B</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS global -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/modules.css">
+<link rel="stylesheet" href="css/content.css">
+</head>
+<body>
+
+    <!-- =========================
+         NAVBAR (componente externo)
+    ========================== -->
+    <header id="navbar-placeholder"></header>
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+    <main>
+
+        <div class="layout">
+        <!-- =========================
+             HEADER DE MODULOS
+        ========================== -->
+        <section id="modules-header">
+            <h1>Modulos</h1>
+            <p>Distintos modulos de aprendizaje.</p>
+        </section>
+
+        <!-- =========================
+             BUSCADOR
+        ========================== -->
+        <section id="module-search">
+            <input
+                type="text"
+                id="searchModuleInput"
+                placeholder="Buscar Modulo..."
+                autocomplete="off"
+            >
+        </section>
+
+        <!-- =========================
+             GRID DE MODULOS
+        ========================== -->
+        <section id="modules-list">
+            <div id="modulesGrid">
+                <!--
+                modules.js renderiza acá:
+                .module-card
+                -->
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <!-- =========================
+         FOOTER (componente externo)
+    ========================== -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- =========================
+         JS
+    ========================== -->
+    <!-- Loader de componentes -->
+    <script src="js/component_loader.js"></script>
+
+    <!-- Lógica de modules -->
+    <script src="js/modules.js"></script>
+
+</body>
+</html>

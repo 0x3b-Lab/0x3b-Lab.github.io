@@ -1,0 +1,163 @@
+/* =========================
+   PATH LAYOUT
+========================= */
+
+#path-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+#path-sidebar {
+    position: sticky;
+    top: 2rem;
+    align-self: flex-start;
+}
+
+#path-image {
+    width: 100%;
+    display: block;
+    border: 1px solid #2b2b2b;
+    background-color: #0e0e0e;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.1);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+#path-content {
+    max-width: 960px;
+}
+
+/* =========================
+   PATH HEADER
+========================= */
+
+#path-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+#path-description {
+    font-size: 1rem;
+    text-align: center;
+    color: #b5b5b5;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+/* =========================
+   MODULES LIST
+========================= */
+
+#path-modules {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+}
+
+/* =========================
+   MODULE CARD
+========================= */
+
+.path-module {
+    padding: 1rem 1rem;
+    border: 1px solid #2b2b2b;
+    background-color: #0e0e0e;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.path-module:hover {
+    border-color: #3a3a3a;
+    background-color: #111;
+}
+
+/* =========================
+   MODULE HEADER
+========================= */
+
+.path-module-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.path-module-index {
+    font-size: 0.85rem;
+    color: #666;
+    letter-spacing: 0.2em;
+}
+
+.path-module-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+/* =========================
+   MODULE BODY
+========================= */
+
+.path-module-description {
+    font-size: 0.95rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+.path-module-meta {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* =========================
+   MODULE LINK
+========================= */
+
+.path-module-link {
+    display: inline-block;
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    color: #9ad;
+    text-decoration: none;
+}
+
+.path-module-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    #path-layout {
+        grid-template-columns: 1fr;
+    }
+
+    #path-sidebar {
+        position: relative;
+        top: auto;
+        margin-bottom: 2rem;
+    }
+
+    #path-image {
+        max-width: 360px;
+    }
+}

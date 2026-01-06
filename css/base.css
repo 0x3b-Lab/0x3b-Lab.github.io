@@ -1,0 +1,104 @@
+/* =========================
+   BASE — 0x3B
+========================= */
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------
+   Variables globales
+------------------------- */
+
+:root {
+    --color-bg: #0d0d0d;
+    --color-fg: #e5e5e5;
+    --color-muted: #a0a0a0;
+
+    --color-accent: #00c8a0;
+
+    --font-base: 'JetBrains Mono', monospace;
+
+    --font-size-base: 16px;
+    --line-height-base: 1.65;
+}
+
+/* -------------------------
+   Fonts
+------------------------- */
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../fonts/JetBrainsMono-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../fonts/JetBrainsMono-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* -------------------------
+   Body
+------------------------- */
+
+html {
+    font-size: var(--font-size-base);
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-base);
+    line-height: var(--line-height-base);
+    min-height: 100vh;
+    overflow-x: hidden; /* no clip */
+}
+
+/* -------------------------
+   Texto base
+------------------------- */
+
+p {
+    margin-bottom: 0;
+    color: var(--color-fg);
+    font-weight: 400;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------
+   Headers
+------------------------- */
+
+h1,
+h2,
+h3 {
+    letter-spacing: 0.04em;
+    font-weight: 500;
+}

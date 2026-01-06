@@ -1,0 +1,71 @@
+/* =========================
+   NAVBAR — 0x3B
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background-color: #000; /* color llamativo inicial */
+    color: #ffffff;
+    border-bottom: 1px solid #333;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* -------------------------
+   Logo
+------------------------- */
+
+.navbar-logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.navbar-logo-img {
+    height: 60px;
+    width: auto;
+}
+
+/* -------------------------
+   Links
+------------------------- */
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.9;
+
+    transition: opacity 0.2s ease;
+}
+
+.navbar-links li a:hover {
+    opacity: 1;
+}

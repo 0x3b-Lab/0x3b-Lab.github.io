@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Module — 0x3B</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS global -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- CSS específico -->
+    <link rel="stylesheet" href="css/module.css">
+    <link rel="stylesheet" href="css/content.css">
+</head>
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header id="navbar-placeholder"></header>
+
+    <!-- =========================
+         MODULE LAYOUT
+    ========================== -->
+    <main id="module-layout">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+        <aside id="module-sidebar">
+
+            <div id="module-header">
+                <h1 id="module-title">Cargando módulo...</h1>
+            </div>
+
+            <nav id="module-posts">
+                <ul id="post-list">
+                    <!-- module.js inyecta items -->
+                </ul>
+            </nav>
+
+        </aside>
+
+        <!-- =========================
+             CONTENT
+        ========================== -->
+        <section id="module-content">
+
+            <header id="post-header">
+                <h2 id="post-title">Seleccioná un post</h2>
+            </header>
+
+            <article id="post-content">
+                <!-- markdown renderizado -->
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- =========================
+         JS
+    ========================== -->
+    <script src="js/component_loader.js"></script>
+    <script type="module" src="js/module.js"></script>
+</body>
+</html>

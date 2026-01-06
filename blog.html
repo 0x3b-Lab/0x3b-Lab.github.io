@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Notas — 0x3B</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS global -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/content.css">
+</head>
+<body>
+
+    <!-- =========================
+        NAVBAR (componente externo)
+    ========================== -->
+    <header id="navbar-placeholder"></header>
+
+    <!-- =========================
+        CONTENIDO PRINCIPAL
+    ========================== -->
+    <main>
+        <div class="layout">
+
+            <!-- =========================
+                HEADER DEL BLOG
+            ========================== -->
+            <section id="blog-header">
+                <h1>0x3B - Notas</h1>
+                <p>
+                    Acá encontrarás distintos posts técnicos, documentación y material de estudio
+                    para empezar en el hacking.
+                </p>
+            </section>
+
+            <!-- =========================
+                BUSCADOR
+            ========================== -->
+            <section id="blog-search">
+                <input 
+                    type="text" 
+                    id="searchpostInput" 
+                    placeholder="Buscar posts..."
+                    autocomplete="off"
+                >
+            </section>
+
+            <!-- =========================
+                 GRID DE POSTS
+            ========================== -->
+            <section id="blog-posts">
+                <div id="posts-grid" class="posts-grid">
+                    <!--
+                        blog.js renderiza acá:
+                        <article class="post-card">...</article>
+                    -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- =========================
+         FOOTER (componente externo)
+    ========================== -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- =========================
+         JS
+    ========================== -->
+    <!-- Loader de componentes -->
+    <script src="js/component_loader.js"></script>
+
+    <!-- Lógica del blog -->
+    <script src="js/blog.js"></script>
+
+</body>
+</html>
