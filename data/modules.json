@@ -6,7 +6,8 @@
     "description": "Conceptos esenciales de redes, protocolos y comunicación entre sistemas.",
     "posts": [
       { "id": "modelo-osi", "order": 1 },
-      { "id": "modelo-tcp-ip", "order": 2 }
+      { "id": "modelo-tcp-ip", "order": 2 },
+      { "id": "protocolo-http-https", "order": 3 }
     ]
   }
 ]
