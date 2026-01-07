@@ -16,5 +16,14 @@
     "date": "2025-01-02",
     "image": "images/logo.png",
     "file": "data/posts/modelo-tcp-ip.md"
+  },  
+  {
+    "id": "protocolo-http-https",
+    "title": "HTTP y HTTPs",
+    "description": "Comprende los protocolos HTTP y HTTPS para la transferencia segura de datos en la web.",
+    "author": "0x3B",
+    "date": "2025-01-02",
+    "image": "images/logo.png",
+    "file": "data/posts/protocolo-http-https.md"
   }
 ]
