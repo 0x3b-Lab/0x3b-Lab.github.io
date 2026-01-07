@@ -1,49 +1,11 @@
 [
   {
-    "id": "linux-basics",
-    "title": "Linux Básico",
-    "image": "images/logo.png",
-    "description": "Base sólida en sistemas GNU/Linux orientada a seguridad, servidores y hacking.",
-    "modules": [
-      { "id": "linux-fundamentals", "order": 1 }
-    ]
-  },
-  {
-    "id": "networking",
-    "title": "Networking",
-    "image": "images/logo.png",
-    "description": "Fundamentos de redes necesarios para entender la comunicación entre sistemas.",
-    "modules": [
-      { "id": "networking-basics", "order": 1 }
-    ]
-  },
-  {
-    "id": "web",
-    "title": "Web",
-    "image": "images/logo.png",
-    "description": "Funcionamiento interno de la web moderna desde una perspectiva técnica.",
-    "modules": [
-      { "id": "web-fundamentals", "order": 1 }
-    ]
-  },
-  {
     "id": "pentesting-web",
     "title": "Pentesting Web",
     "image": "images/logo.png",
     "description": "Aprende a identificar y explotar vulnerabilidades en aplicaciones web.",
     "modules": [
-      { "id": "linux-fundamentals", "order": 1 },
-      { "id": "web-fundamentals", "order": 2 },
-      { "id": "security-intro", "order": 3 }
-    ]
-  },
-  {
-    "id": "security",
-    "title": "Seguridad Informática",
-    "image": "images/logo.png",
-    "description": "Introducción estructurada a los conceptos y prácticas de seguridad.",
-    "modules": [
-      { "id": "security-intro", "order": 1 }
+      { "id": "network-fundamentals", "order": 1 }
     ]
   }
 ]

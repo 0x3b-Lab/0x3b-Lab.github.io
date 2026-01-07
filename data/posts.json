@@ -1,83 +1,20 @@
 [
   {
-    "id": "permisos-linux",
-    "title": "Permisos en Linux",
-    "description": "Cómo funcionan los permisos de archivos y directorios en sistemas Linux.",
+    "id": "modelo-osi",
+    "title": "Modelo OSI",
+    "description": "Comprende la estructura de capas del modelo OSI para entender la comunicación en redes.",
     "author": "0x3B",
     "date": "2025-01-01",
     "image": "images/logo.png",
-    "file": "data/posts/post_de_prueba.md"
+    "file": "data/posts/modelo_osi.md"
   },
   {
-    "id": "bash-linux",
-    "title": "Introducción a Bash",
-    "description": "Uso básico de la shell Bash para interactuar con el sistema.",
+    "id": "modelo-tcp-ip",
+    "title": "Modelo TCP/IP",
+    "description": "Comprende la estructura de capas del modelo TCP/IP para entender la comunicación en redes.",
     "author": "0x3B",
     "date": "2025-01-02",
     "image": "images/logo.png",
-    "file": "data/posts/post_de_prueba.md"
-  },
-  {
-    "id": "modelo-osi",
-    "title": "¿Qué es el modelo OSI?",
-    "description": "Modelo conceptual que explica cómo se comunican los sistemas en red.",
-    "author": "0x3B",
-    "date": "2025-01-03",
-    "image": "images/logo.png",
-    "file": "data/posts/Modelo OSI.md"
-  },
-  {
-    "id": "tcp-ip",
-    "title": "Modelo TCP/IP",
-    "description": "Arquitectura práctica de protocolos usada en Internet.",
-    "author": "0x3B",
-    "date": "2025-01-04",
-    "image": "images/logo.png",
-    "file": "data/posts/post_de_prueba.md"
-  },
-  {
-    "id": "http-basics",
-    "title": "Fundamentos de HTTP",
-    "description": "Cómo funciona el protocolo HTTP y la comunicación cliente-servidor.",
-    "author": "0x3B",
-    "date": "2025-01-05",
-    "image": "images/logo.png",
-    "file": "data/posts/post_de_prueba.md"
-  },
-  {
-    "id": "cookies-sessions",
-    "title": "Cookies y Sesiones",
-    "description": "Mecanismos de estado en aplicaciones web modernas.",
-    "author": "0x3B",
-    "date": "2025-01-06",
-    "image": "images/logo.png",
-    "file": "data/posts/post_de_prueba.md"
-  },
-  {
-    "id": "cia-triad",
-    "title": "La tríada CIA",
-    "description": "Confidencialidad, Integridad y Disponibilidad explicadas.",
-    "author": "0x3B",
-    "date": "2025-01-07",
-    "image": "images/logo.png",
-    "file": "data/posts/post_de_prueba.md"
-  },
-  {
-    "id": "attack-surface",
-    "title": "Superficie de Ataque",
-    "description": "Qué es y cómo identificar la superficie de ataque de un sistema.",
-    "author": "0x3B",
-    "date": "2025-01-08",
-    "image": "images/logo.png",
-    "file": "data/posts/post_de_prueba.md"
-  },
-  {
-    "id": "threat-modeling",
-    "title": "Threat Modeling",
-    "description": "Metodologías para anticipar amenazas y riesgos.",
-    "author": "0x3B",
-    "date": "2025-01-09",
-    "image": "images/logo.png",
-    "file": "data/posts/post_de_prueba.md"
+    "file": "data/posts/modelo_tcp_ip.md"
   }
 ]
