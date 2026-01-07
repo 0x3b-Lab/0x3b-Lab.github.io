@@ -1,10 +1,10 @@
+# ¿Que es TCP/IP?
 
 TCP/IP es el conjunto de protocolos que permite que Internet funcione. Define como se fragmentan, envian, enrutan y reciben los datos entre dos sistemas a traves de una red.
 
 A diferencia de OSI, no es solo un modelo teorico: TCP/IP es el estandar real en uso, basado principalmente en IP para el direcionamiento y en TCP o UDP para el transporte de informacion.
 
 ---
-
 ## Capas del modelo TCP/IP
 
 El modelo TCP/IP divide la comunicacion en 4 capas, cada una con una responsabilidad concreta.
@@ -18,7 +18,6 @@ No le importa qué significan los datos ni a dónde van a nivel global, sino **c
 
 Acá aparece la idea de _estar conectado físicamente a una red_.
 La capa de Acceso a red se encarga de:
-
 - Acceder al medio físico (cable o aire)
 - Encapsular datos en tramas
 - Usar direcciones físicas (MAC)
@@ -27,14 +26,12 @@ La capa de Acceso a red se encarga de:
 
 Si esta capa falla, **no hay comunicación**, aunque IP, TCP y las aplicaciones estén bien configuradas.  
 Es cuando estás “conectado” pero no ves la red, o la red te ve pero no responde.
-
 - Tramas
 - Direcciones MAC
 - ARP
 - Ethernet / Wi-Fi
 
 Desde una perspectiva atacante, esta capa permite:
-
 - Sniffear tráfico local
 - Realizar ARP spoofing / poisoning
 - Ataques Man-in-the-Middle
@@ -49,7 +46,6 @@ No mantiene estado ni garantiza entrega: su único objetivo es **direccionar y e
 
 Acá aparece la idea de _ubicación en la red_.
 La capa de Internet se encarga de:
-
 - Asignar direcciones lógicas (IP)
 - Encapsular datos en paquetes
 - Determinar rutas entre redes
@@ -58,14 +54,12 @@ La capa de Internet se encarga de:
 
 Si esta capa falla, los sistemas pueden estar conectados a la red local, pero **no llegan al destino**.  
 Es cuando hay conexión, pero “no hay Internet”.
-
 - Direcciones IP
 - Paquetes
 - Enrutamiento
 - ICMP
 
 Desde una perspectiva atacante, esta capa permite:
-
 - IP spoofing
 - Escaneo de red y hosts
 - ICMP abuse (ping flood, smurf)
@@ -80,7 +74,6 @@ No le importa por dónde viajan los paquetes, sino **cómo llegan**: ordenados, 
 
 Acá aparece la idea de _comunicación entre procesos_.
 La capa de Transporte se encarga de:
-
 - Establecer o no una conexión
 - Controlar el flujo de datos
 - Manejar errores y retransmisiones
@@ -89,7 +82,6 @@ La capa de Transporte se encarga de:
 
 Si esta capa falla, los sistemas pueden verse y comunicarse a nivel IP, pero **las aplicaciones no funcionan correctamente**.  
 Es cuando “hay red”, pero el servicio no responde.
-
 - Puertos
 - Segmentos
 - TCP / UDP
@@ -102,8 +94,8 @@ Desde una perspectiva atacante, esta capa permite:
 - SYN flood
 - TCP reset injection
 - Session desynchronization
-- Abuso de servicios UDP
 
+- Abuso de servicios UDP
 
 ---
 ## 4. Capa: Aplicación
@@ -123,7 +115,6 @@ La capa de Aplicación se encarga de:
 
 Si esta capa falla, la red y el transporte pueden funcionar perfectamente, pero **el servicio es inutilizable**.  
 Es cuando “hay Internet”, pero la aplicación devuelve errores o no responde.
-
 - Protocolos de aplicación    
 - Requests / Responses
 - Headers
@@ -131,7 +122,6 @@ Es cuando “hay Internet”, pero la aplicación devuelve errores o no responde
 - Estados de aplicación
 
 Ejemplos comunes:
-
 - HTTP / HTTPS
 - DNS
 - FTP
@@ -139,7 +129,6 @@ Ejemplos comunes:
 - SSH
 
 Desde una perspectiva atacante, esta capa permite:
-
 - Inyección (SQL, command, template)
 - Ataques de autenticación
 - Abuso de lógica de negocio

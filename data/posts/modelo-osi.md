@@ -8,7 +8,6 @@ Es un modelo mental: una manera de ordenar el  caos.
 Cuando dos sistemas se comunican, pasan muchas cosas al mismo tiempo: señales, direciones, reglas, formatos y aplicaciones. El modelo OSI separa todo ese proceso en partes mas simples, lo que llamaremos capas, para poder entender que pasa, donde pasa y como se puede romper.
 
 Divide el proceso de comunicacion en 7 capas
-
 1. Fisica
 2. Enlace de datos
 3. Red
@@ -48,14 +47,12 @@ La capa de Enlace de datos es la que **pone orden sobre el caos físico**.
 La capa Física solo mueve señales; esta capa decide **quién habla, quién escucha y a quién va dirigido cada paquete** dentro de una red local.
 
 Acá aparecen las **reglas básicas de comunicación** entre dispositivos conectados al mismo medio físico.
-
 - Direcciones MAC (identidad física de cada dispositivo)
 - Tramas (frames)
 - Switches
 - Protocolos como Ethernet y Wi-Fi
 
 Esta capa se encarga de:
-
 - Identificar dispositivos dentro de la red local
 - Controlar el acceso al medio
 - Detectar errores básicos de transmisión
@@ -64,7 +61,6 @@ Esta capa se encarga de:
 Si esta capa falla, los dispositivos pueden estar conectados físicamente, pero **no saben quién es quién** ni con quién están hablando.
 
 Desde una perspectiva atacante, esta capa es ideal para:
-
 - Suplantar identidades (MAC spoofing)
 - Escuchar tráfico que no te pertenece
 - Engañar a switches
