@@ -6,7 +6,7 @@
     "author": "0x3B",
     "date": "2025-01-01",
     "image": "images/logo.png",
-    "file": "data/posts/modelo_osi.md"
+    "file": "data/posts/modelo-osi.md"
   },
   {
     "id": "modelo-tcp-ip",
@@ -15,6 +15,6 @@
     "author": "0x3B",
     "date": "2025-01-02",
     "image": "images/logo.png",
-    "file": "data/posts/modelo_tcp_ip.md"
+    "file": "data/posts/modelo-tcp-ip.md"
   }
 ]
