@@ -1,6 +1,4 @@
 
-# Instalacion de Kali Linux en VirtualBox
-
 Me surgió la necesidad de instalar Kali Linux en una máquina virtual usando VirtualBox, así que aproveché el proceso para ir sacando capturas de pantalla y dejar todo el procedimiento documentado.
 
 La idea de este post es mostrar la instalación **paso a paso, click a click**, sin saltear pantallas ni opciones. Por eso vas a encontrar una secuencia completa de capturas que acompañan todo el proceso, lo que hace que sea fácil de seguir incluso para quienes nunca instalaron Kali Linux o recién empiezan con máquinas virtuales.
