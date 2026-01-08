@@ -7,27 +7,8 @@
     "posts": [
       { "id": "modelo-osi", "order": 1 },
       { "id": "modelo-tcp-ip", "order": 2 },
-      { "id": "protocolo-http-https", "order": 3 }
-    ]
-  },
-   {
-    "id": "modulo-de-prueba",
-    "title": "Modulo de prueba",
-    "image": "",
-    "description": "Blah",
-    "posts": [
-      {
-        "id": "modelo-tcp-ip",
-        "order": 1
-      },
-      {
-        "id": "modelo-osi",
-        "order": 2
-      },
-      {
-        "id": "protocolo-http-https",
-        "order": 3
-      }
+      { "id": "dns-en-detalle", "order": 3 },
+      { "id": "protocolo-http-https", "order": 4 }
     ]
   }
 ]
