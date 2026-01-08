@@ -1,9 +1,15 @@
 # DNS (Domain Name System)
 
 DNS (Sistema de nombres de dominio) provee una forma simple para comunicarse con dispositivos en internet sin la necesidad de recordar numeros complejos.
-Al igual que una casa tiene una direccion unica para recibir una carta, cada computadora en internet tiene su propia direccion unica para comunicarse, llamada direccion IP.
-Una IP se veria asi : __142.251.129.78__
-4 sets de digitos en rango de 0 a 255 separados por un punto (.) 
-Cuando queremos acceder a una web, no es exactamente conveniente tener que recordar todos estos numeros, y es ahi donde entra DNS a ayudarnos, si podes recordar __142.251.129.78__ entonces podes recordar **google.com** 
+Al iguaEl **DNS (Sistema de Nombres de Dominio)** provee una forma simple de comunicarse con dispositivos en Internet sin la necesidad de recordar números complejos.
+
+Así como una casa tiene una dirección única para recibir una carta, cada computadora o servidor conectado a Internet posee una **dirección única** para comunicarse, llamada **dirección IP**.
+
+Una dirección IP se ve de la siguiente manera:  
+`142.251.129.78`
+
+Está compuesta por **cuatro grupos de números**, cada uno con un valor entre **0 y 255**, separados por un punto (`.`).
+
+Recordar este tipo de números no es práctico para las personas. Por eso, cuando queremos acceder a un sitio web, entra en juego el DNS: en lugar de memorizar una IP como `142.251.129.78`, podemos usar un nombre fácil de recordar, como **google.com**.
 
 ## Jerarquia de Dominios

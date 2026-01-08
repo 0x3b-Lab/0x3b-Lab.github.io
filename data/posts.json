@@ -34,5 +34,14 @@
     "date": "2025-01-02",
     "image": "images/logo.png",
     "file": "data/posts/virtualbox-kali-linux.md"
+  },  
+  {
+    "id": "dns-en-detalle",
+    "title": "DNS en detalle",
+    "description": "Comprende cómo funciona el DNS y su importancia en la resolución de nombres.",
+    "author": "0x3B",
+    "date": "2025-01-02",
+    "image": "images/logo.png",
+    "file": "data/posts/dns-en-detalle.md"
   }
 ]
