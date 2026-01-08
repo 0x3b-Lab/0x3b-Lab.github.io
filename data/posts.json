@@ -25,5 +25,14 @@
     "date": "2025-01-02",
     "image": "images/logo.png",
     "file": "data/posts/protocolo-http-https.md"
+  },  
+  {
+    "id": "virtualbox-kali-linux",
+    "title": "Instalación de Kali Linux en VirtualBox",
+    "description": "Guía paso a paso para instalar Kali Linux en VirtualBox.",
+    "author": "0x3B",
+    "date": "2025-01-02",
+    "image": "images/logo.png",
+    "file": "data/posts/virtualbox-kali-linux.md"
   }
 ]
