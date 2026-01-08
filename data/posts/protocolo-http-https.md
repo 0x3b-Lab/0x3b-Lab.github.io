@@ -1,5 +1,4 @@
-
-# HTTP y HTTPS
+# Protocolo HTTP y HTTPS
 > Como viajan los datos en la web
 
 ## 1. ¿Qué es HTTP?
