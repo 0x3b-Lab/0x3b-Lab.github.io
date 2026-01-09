@@ -157,10 +157,10 @@ function renderGraph(nodes, edges) {
 
         switch (node.group) {
             case "path":
-                window.location.href = `path.html?path=${nodeId}`;
+                window.location.href = `path.html?id=${nodeId}`;
                 break;
             case "module":
-                window.location.href = `module.html?module=${nodeId}`;
+                window.location.href = `module.html?id=${nodeId}`;
                 break;
             case "post":
                 window.location.href = `post.html?post=${nodeId}`;
