@@ -1,4 +1,3 @@
-
 Me surgió la necesidad de instalar Kali Linux en una máquina virtual usando VirtualBox, así que aproveché el proceso para ir sacando capturas de pantalla y dejar todo el procedimiento documentado.
 
 La idea de este post es mostrar la instalación **paso a paso, click a click**, sin saltear pantallas ni opciones. Por eso vas a encontrar una secuencia completa de capturas que acompañan todo el proceso, lo que hace que sea fácil de seguir incluso para quienes nunca instalaron Kali Linux o recién empiezan con máquinas virtuales.
@@ -24,6 +23,8 @@ Siguiendo las imágenes en orden, deberías poder replicar la instalación sin m
 ![[virtualbox_img_12.png]]
 ![[virtualbox_img_13.png]]
 ![[virtualbox_img_14.png]]
+> En esta me equivoque, le termine poniendo 'user0x3b' porque si no, te tira error ya que necesita empezar con una letra minuscula
+---
 ![[virtualbox_img_15.png]]
 ![[virtualbox_img_16.png]]
 ![[virtualbox_img_17.png]]
