@@ -87,5 +87,6 @@ Se usa para navegación interna o lógica del frontend.
 #comentarios
 #es
 ```
+---
 
 Cuando introducimos una URL en el navegador (Chrome, Firefox o lo que sea), abrimos una conexion TCP/IP, y la solicitud HTTP se envia al servidor
