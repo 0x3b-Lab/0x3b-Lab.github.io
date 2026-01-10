@@ -13,7 +13,7 @@ Siguiendo las imágenes en orden, deberías poder replicar la instalación sin m
 ![[virtualbox_img_5.png]]
 ![[virtualbox_img_6.png]]
 
-> A partir de aca, los pasos de instalacion son lo mismo para una maquina virtual o para una instalacion nativa.
+> A partir de aca, los pasos de instalacion son lo mismo para una maquina virtual o para una instalacion nativa. (Y el procedimiento aplica tambien a ubuntu, debian etc etc)
 
 ![[virtualbox_img_7.png]]
 ![[virtualbox_img_8.png]]
@@ -23,10 +23,12 @@ Siguiendo las imágenes en orden, deberías poder replicar la instalación sin m
 ![[virtualbox_img_12.png]]
 ![[virtualbox_img_13.png]]
 ![[virtualbox_img_14.png]]
-> En esta me equivoque, le termine poniendo 'user0x3b' porque si no, te tira error ya que necesita empezar con una letra minuscula
+> En esta me equivoque, le termine poniendo 'user0x3b' porque si no, te tira error ya que necesita empezar con una letra minuscula (xd me paso por no leer)
 ---
 ![[virtualbox_img_15.png]]
 ![[virtualbox_img_16.png]]
+> Aca lo ideal seria la tercer opcion *Guiado - utilizar todo el disco y configurar LVM cifrado*
+> pero bueno, por el momento asi esta bien
 ![[virtualbox_img_17.png]]
 ![[virtualbox_img_18.png]]
 ![[virtualbox_img_19.png]]
