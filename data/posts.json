@@ -38,10 +38,19 @@
   {
     "id": "dns-en-detalle",
     "title": "DNS en detalle",
-    "description": "Comprende cómo funciona el DNS y su importancia en la resolución de nombres.",
+    "description": "Comprende cómo funciona el DNS y su importancia en laresolución de nombres.",
     "author": "0x3B",
     "date": "2025-01-02",
     "image": "images/logo.png",
     "file": "data/posts/dns-en-detalle.md"
+  },  
+  {
+    "id": "nmap-guia-rapida",
+    "title": "Como utilizar nmap",
+    "description": "Nmap es el punto de partida para analizar qué sistemas se exponen en una red. Esta guía rápida recorre técnicas de escaneo, detección de puertos y servicios, y cómo interpretar la salida para el reconocimiento inicial.",
+    "author": "0x3B",
+    "date": "2025-01-10",
+    "image": "images/logo.png",
+    "file": "data/posts/nmap-guia-rapida.md"
   }
 ]
