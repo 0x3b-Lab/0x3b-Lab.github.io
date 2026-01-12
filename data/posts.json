@@ -52,5 +52,14 @@
     "date": "2025-01-10",
     "image": "images/logo.png",
     "file": "data/posts/nmap-guia-rapida.md"
+  },  
+  {
+    "id": "direccion-ip",
+    "title": "¿Que es una direccion IP?",
+    "description": "Comprendé qué es una IP. Descubrí de manera simple qué es, para qué sirve y por qué es clave en internet.",
+    "author": "0x3B",
+    "date": "2025-01-11",
+    "image": "images/logo.png",
+    "file": "data/posts/direccion-ip.md"
   }
 ]
