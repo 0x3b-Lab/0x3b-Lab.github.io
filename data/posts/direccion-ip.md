@@ -14,4 +14,4 @@ La misma dirección IP puede existir en miles de redes distintas al mismo tiempo
 Esto pasa porque una IP no es un identificador absoluto, sino **contextual**.  
 La red a la que pertenece le da sentido a esa dirección. Sin ese contexto, la IP por sí sola no dice demasiado.
 
-Volviendo a la analogía, es como una dirección de casa. Puede existir una “San Martín 123” en muchas ciudades distintas. La dirección funciona porque está asociada a una ciudad específica. En redes sucede lo mismo: **la IP identifica al host solo dentro de su red**.
+Volviendo a la analogía, es como una dirección de casa. Puede existir una “Calle falsa 123” en muchas ciudades distintas. La dirección funciona porque está asociada a una ciudad específica. En redes sucede lo mismo: **la IP identifica al host solo dentro de su red**.

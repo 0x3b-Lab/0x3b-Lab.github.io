@@ -65,7 +65,7 @@ Una vez que ya sabemos **qué hosts están activos**, la siguiente pregunta lóg
 Por defecto, Nmap no escanea todo. Hace un recorte bastante razonable de los **puertos más comunes**, pero muchas veces eso no alcanza o directamente no es lo que nos interesa. Ahí entra en juego la **especificación manual de puertos**.
 
 El parámetro base para esto es `-p`.
-Con `-p` le indicamos a Nmap **exactamente qué puertos escanear**, sin vueltas ni decisiones implícitas.
+Con `-p` le indicamos a Nmap **exactamente qué puertos escanear** especificamente.
 
 Ejemplos simples:
 - Un solo puerto: `nmap -p22 192.168.1.1`
@@ -74,3 +74,21 @@ Ejemplos simples:
 - Todos los puertos (1 a 65535):`nmap -p- 192.168.1.1`
 
 Esto es útil cuando ya tenemos una idea de **qué servicio estamos buscando**, o cuando queremos reducir ruido y tiempo de escaneo.
+
+![[nmap_port_custom_scan.png]]
+Nmap ordena de forma aleatoria los puertos a sondear por omisión (aunque algunos puertos comúnmente accesibles se ponen al principio por razones de eficiencia). Esta aleatorización generalmente es deseable, pero si lo desea puede especificar la opción `-r` para analizar de forma secuencial los puertos.
+
+# Deteccion de servicios y versiones
+Si se le indica a Nmap que analice un sistema remoto, la respuesta puede mostrar puertos abiertos como `21/tcp`, `22/tcp` o `25/tcp`, que **habitualmente** se asocian a FTP, SSH y SMTP respectivamente.  
+Eso es una convención, no una regla: nada impide que alguien ejecute servicios distintos en puertos “raros” o no estándar.
+
+La detección de versiones (`-sV`) va un paso más allá.  
+Una vez identificados los puertos abiertos, Nmap **interactúa activamente con el servicio** para determinar **qué protocolo es, qué aplicación lo implementa, qué versión corre** y, en algunos casos, incluso inferir **el sistema operativo o el tipo de dispositivo**.
+
+Esto es clave en un análisis de vulnerabilidades, porque la mayoría de las fallas dependen de **versiones específicas**. Un ejemplo clásico es `vsftpd 2.3.4`, una versión que incluye una vulnerabilidad que permite obtener un backdoor, algo que Nmap puede detectar directamente.
+
+![[nmap_sV_scan.png]]  
+![[vsftpd_2.3.4.png]]
+
+Para lograr esto, Nmap envía sondas definidas en el archivo `nmap-service-probes` y compara las respuestas con una base de firmas.  
+Si el servicio utiliza cifrado (SSL/TLS) o se trata de RPC, Nmap también intenta identificarlo automáticamente.
