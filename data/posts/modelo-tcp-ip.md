@@ -13,14 +13,14 @@ La tecnologia TCP/IP aplica la siguiente estructura logica.
 ---
 
 ## Capas del modelo TCP/IP
-### 1. Capa de Acceso a Red (Link / Network Access)
+## 1. Capa de Acceso a Red (Link / Network Access)
 La capa de Acceso a Red del modelo TCP/IP define los mecanismos necesarios para la transmisión de datos entre nodos dentro del mismo enlace físico o lógico.
 Incluye tanto los aspectos físicos como los de enlace de datos, abarcando tecnologías como Ethernet, Wi-Fi o enlaces seriales.
 
 Su función es proporcionar a la capa IP un medio confiable para enviar y recibir paquetes, sin conocimiento del significado de los datos ni de su destino fuera del segmento local.
 ---
 
-### 2. Capa de Interred
+## 2. Capa de Interred
 La capa de interred es el núcleo del modelo TCP/IP.
 Su función es permitir que los hosts envíen paquetes IP a través de múltiples redes interconectadas, sin importar si el destino se encuentra en la misma red local o en una red remota.
 Esta capa ofrece un servicio no orientado a conexión y de tipo best-effort:
@@ -34,7 +34,7 @@ La capa de interred define:
 Su tarea principal es el ruteo de paquetes IP, determinando el camino que deben seguir a través de la red para alcanzar su destino final.
 ---
 
-### 3. Capa: Transporte
+## 3. Capa: Transporte
 La capa de transporte se encarga de permitir que las entidades pares, ubicadas en los nodos de origen y destino, lleven a cabo una comunicación extremo a extremo.
 En esta capa se definen los protocolos responsables del intercambio directo de datos entre procesos que se ejecutan en distintos hosts.
 
@@ -46,7 +46,7 @@ El segundo protocolo de esta capa es UDP (User Datagram Protocol). UDP es un pro
 Se utiliza comúnmente en intercambios de tipo petición–respuesta de una sola ocasión en arquitecturas cliente–servidor, así como en aplicaciones donde resulta más importante la entrega oportuna de los datos que su entrega precisa, como en la transmisión de voz o video.
 ---
 
-4. Capa: Aplicación
+## 4. Capa: Aplicación
 
 La capa de aplicación agrupa a todos los protocolos de más alto nivel del modelo TCP/IP. Estos protocolos son los que utilizan directamente las aplicaciones de usuario para intercambiar información a través de la red y definen el formato, la semántica y el orden de los mensajes que se envían entre los procesos.
 
