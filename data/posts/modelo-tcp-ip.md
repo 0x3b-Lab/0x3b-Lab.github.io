@@ -1,138 +1,57 @@
-# ¿Que es TCP/IP?
+## ¿Que es el modelo de referencia TCP/IP?
+El modelo de referencia TCP/IP describe el conjunto de protocolos de red diseñado por Vinton Cerf y Robert E. Kahn en 1974.
+Posteriormente fue refinado y formalizado como estándar dentro de la comunidad de Internet por Robert Braden (1989).
+La filosofía de diseño que sustenta este modelo es analizada por David D. Clark (1988).
 
-TCP/IP es el conjunto de protocolos que permite que Internet funcione. Define como se fragmentan, envian, enrutan y reciben los datos entre dos sistemas a traves de una red.
+Cuando se habla de TCP/IP, en general no se está haciendo referencia únicamente a los protocolos TCP e IP en sí, sino a un conjunto mucho más amplio de elementos. Bajo ese nombre suelen agruparse otros protocolos, aplicaciones e incluso los medios de red sobre los que todo esto funciona.
 
-A diferencia de OSI, no es solo un modelo teorico: TCP/IP es el estandar real en uso, basado principalmente en IP para el direcionamiento y en TCP o UDP para el transporte de informacion.
+Dentro de ese conjunto aparecen protocolos como `UDP`, `ARP` o `ICMP`, y aplicaciones como `TELNET`, `FTP` o `RPC`. Por eso, el término TCP/IP resulta bastante impreciso, no es la idea de este post hablar de todos los protocolos que conforman TCP/IP, si no dar una acercamiento a como funciona el stack.
 
+## Estructura básica
+La tecnologia TCP/IP aplica la siguiente estructura logica.
+![[Modelo_de_referencia_TCPIP.png]]
 ---
+
 ## Capas del modelo TCP/IP
+### 1. Capa de Acceso a Red (Link / Network Access)
+La capa de Acceso a Red del modelo TCP/IP define los mecanismos necesarios para la transmisión de datos entre nodos dentro del mismo enlace físico o lógico.
+Incluye tanto los aspectos físicos como los de enlace de datos, abarcando tecnologías como Ethernet, Wi-Fi o enlaces seriales.
 
-El modelo TCP/IP divide la comunicacion en 4 capas, cada una con una responsabilidad concreta.
-No explica como deberia de funcionar la red, si no, como funciona la red en la practica.
-
+Su función es proporcionar a la capa IP un medio confiable para enviar y recibir paquetes, sin conocimiento del significado de los datos ni de su destino fuera del segmento local.
 ---
-## 1. Capa: Acceso a red (Network Access)
 
-La capa de Acceso a red se encarga de **cómo los datos se mueven físicamente dentro de una red local**.  
-No le importa qué significan los datos ni a dónde van a nivel global, sino **cómo se transmiten de un dispositivo a otro en el mismo medio**.
+### 2. Capa de Interred
+La capa de interred es el núcleo del modelo TCP/IP.
+Su función es permitir que los hosts envíen paquetes IP a través de múltiples redes interconectadas, sin importar si el destino se encuentra en la misma red local o en una red remota.
+Esta capa ofrece un servicio no orientado a conexión y de tipo best-effort:
+los paquetes se envían de forma independiente, pueden seguir rutas distintas y no se garantiza ni el orden de llegada ni la entrega. Si se requiere una entrega confiable y ordenada, esa responsabilidad recae en las capas superiores.
+Se la denomina interred en sentido genérico, ya que su objetivo es interconectar redes, aunque su implementación más conocida es Internet.
 
-Acá aparece la idea de _estar conectado físicamente a una red_.
-La capa de Acceso a red se encarga de:
-- Acceder al medio físico (cable o aire)
-- Encapsular datos en tramas
-- Usar direcciones físicas (MAC)
-- Detectar dispositivos dentro de la red local
-- Resolver quién es quién en la LAN
-
-Si esta capa falla, **no hay comunicación**, aunque IP, TCP y las aplicaciones estén bien configuradas.  
-Es cuando estás “conectado” pero no ves la red, o la red te ve pero no responde.
-- Tramas
-- Direcciones MAC
-- ARP
-- Ethernet / Wi-Fi
-
-Desde una perspectiva atacante, esta capa permite:
-- Sniffear tráfico local
-- Realizar ARP spoofing / poisoning
-- Ataques Man-in-the-Middle
-- Clonar direcciones MAC    
-- Desconectar o aislar dispositivos de la red
-
+La capa de interred define:
+- Un formato de paquete estándar
+- El protocolo IP (Internet Protocol) como mecanismo principal de direccionamiento y encaminamiento
+- El protocolo auxiliar ICMP (Internet Control Message Protocol) para notificación de errores y diagnóstico
+Su tarea principal es el ruteo de paquetes IP, determinando el camino que deben seguir a través de la red para alcanzar su destino final.
 ---
-## 2. Capa: Internet
 
-La capa de Internet se encarga de **llevar los paquetes desde el origen hasta el destino**, incluso cuando están en **redes distintas**.  
-No mantiene estado ni garantiza entrega: su único objetivo es **direccionar y enrutar**.
+### 3. Capa: Transporte
+La capa de transporte se encarga de permitir que las entidades pares, ubicadas en los nodos de origen y destino, lleven a cabo una comunicación extremo a extremo.
+En esta capa se definen los protocolos responsables del intercambio directo de datos entre procesos que se ejecutan en distintos hosts.
 
-Acá aparece la idea de _ubicación en la red_.
-La capa de Internet se encarga de:
-- Asignar direcciones lógicas (IP)
-- Encapsular datos en paquetes
-- Determinar rutas entre redes
-- Enrutar tráfico a través de múltiples saltos
-- Notificar errores de red
+El primero de estos protocolos es TCP (Transmission Control Protocol). Se trata de un protocolo confiable y orientado a la conexión, que permite que un flujo de bytes generado en una máquina sea entregado sin errores a cualquier otra máquina dentro de la interred.
+TCP segmenta el flujo de bytes de entrada en mensajes discretos y los entrega a la capa de red. En el nodo destino, el proceso TCP receptor reensambla los segmentos recibidos para reconstruir el flujo de salida original.
+Además, TCP implementa mecanismos de control de flujo, asegurando que un emisor rápido no pueda saturar a un receptor lento con más datos de los que este puede manejar.
 
-Si esta capa falla, los sistemas pueden estar conectados a la red local, pero **no llegan al destino**.  
-Es cuando hay conexión, pero “no hay Internet”.
-- Direcciones IP
-- Paquetes
-- Enrutamiento
-- ICMP
-
-Desde una perspectiva atacante, esta capa permite:
-- IP spoofing
-- Escaneo de red y hosts
-- ICMP abuse (ping flood, smurf)
-- Manipulación de rutas
-- Descubrimiento de topología de red
-
+El segundo protocolo de esta capa es UDP (User Datagram Protocol). UDP es un protocolo no orientado a la conexión y no confiable, diseñado para aplicaciones que no requieren la asignación de secuencia ni el control de flujo provistos por TCP, o que prefieren implementar estos mecanismos por su cuenta.
+Se utiliza comúnmente en intercambios de tipo petición–respuesta de una sola ocasión en arquitecturas cliente–servidor, así como en aplicaciones donde resulta más importante la entrega oportuna de los datos que su entrega precisa, como en la transmisión de voz o video.
 ---
-## 3. Capa: Transporte
 
-La capa de Transporte se encarga de **cómo se envían los datos entre dos sistemas de extremo a extremo**.  
-No le importa por dónde viajan los paquetes, sino **cómo llegan**: ordenados, completos, rápidos o confiables.
+4. Capa: Aplicación
 
-Acá aparece la idea de _comunicación entre procesos_.
-La capa de Transporte se encarga de:
-- Establecer o no una conexión
-- Controlar el flujo de datos
-- Manejar errores y retransmisiones
-- Multiplexar comunicaciones mediante puertos
-- Decidir confiabilidad vs velocidad
+La capa de aplicación agrupa a todos los protocolos de más alto nivel del modelo TCP/IP. Estos protocolos son los que utilizan directamente las aplicaciones de usuario para intercambiar información a través de la red y definen el formato, la semántica y el orden de los mensajes que se envían entre los procesos.
 
-Si esta capa falla, los sistemas pueden verse y comunicarse a nivel IP, pero **las aplicaciones no funcionan correctamente**.  
-Es cuando “hay red”, pero el servicio no responde.
-- Puertos
-- Segmentos
-- TCP / UDP
-- Handshake
-- Control de flujo
+Entre los primeros protocolos definidos en esta capa se encuentran el terminal virtual (TELNET), los mecanismos de transferencia de archivos (FTP) y el correo electrónico (SMTP). Con el crecimiento y la evolución de Internet, se fueron incorporando nuevos protocolos para cubrir distintas necesidades y modelos de comunicación.
 
-Desde una perspectiva atacante, esta capa permite:
-
-- Port scanning
-- SYN flood
-- TCP reset injection
-- Session desynchronization
-
-- Abuso de servicios UDP
-
----
-## 4. Capa: Aplicación
-
-La capa de Aplicación es donde **las aplicaciones interactúan directamente entre sí**.  
-Define **cómo se solicitan, envían y reciben datos a nivel lógico**, no cómo viajan ni cómo se entregan.
-
-Acá aparece la idea de _servicios expuestos_.
-
-La capa de Aplicación se encarga de:
-
-- Definir protocolos de comunicación entre aplicaciones
-- Establecer formatos de mensajes
-- Gestionar solicitudes y respuestas
-- Interpretar el contenido de los datos
-- Exponer servicios al usuario o a otros sistemas
-
-Si esta capa falla, la red y el transporte pueden funcionar perfectamente, pero **el servicio es inutilizable**.  
-Es cuando “hay Internet”, pero la aplicación devuelve errores o no responde.
-- Protocolos de aplicación    
-- Requests / Responses
-- Headers
-- Payloads
-- Estados de aplicación
-
-Ejemplos comunes:
-- HTTP / HTTPS
-- DNS
-- FTP
-- SMTP / IMAP / POP3
-- SSH
-
-Desde una perspectiva atacante, esta capa permite:
-- Inyección (SQL, command, template)
-- Ataques de autenticación
-- Abuso de lógica de negocio
-- Exposición de APIs
-- Manipulación de requests y headers
-
+Algunos de los protocolos más relevantes incorporados con el tiempo son DNS, encargado de la resolución de nombres de dominio, y HTTP/HTTPS, utilizados como base para la comunicación entre clientes y servidores web.
+En conjunto, la capa de aplicación proporciona las interfaces y servicios necesarios para que las aplicaciones puedan utilizar la infraestructura de red subyacente sin necesidad de conocer los detalles de su funcionamiento interno.
 ---

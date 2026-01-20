@@ -61,5 +61,14 @@
     "date": "2025-01-11",
     "image": "images/logo.png",
     "file": "data/posts/direccion-ip.md"
+  },  
+  {
+    "id": "el-shell",
+    "title": "¿Que es Shell?",
+    "description": "Shell, la capa externa del sistema operativo.",
+    "author": "0x3B",
+    "date": "2025-01-15",
+    "image": "images/logo.png",
+    "file": "data/posts/el-shell.md"
   }
 ]
