@@ -70,5 +70,14 @@
     "date": "2025-01-15",
     "image": "images/logo.png",
     "file": "data/posts/el-shell.md"
+  },  
+  {
+    "id": "testing",
+    "title": "Testing Title",
+    "description": "Testing Descr.",
+    "author": "0x3B",
+    "date": "2025-01-15",
+    "image": "images/logo.png",
+    "file": "data/posts/nota-de-pruebas.md"
   }
 ]
