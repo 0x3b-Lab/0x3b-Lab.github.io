@@ -53,7 +53,7 @@ export default function parseMarkdown(md) {
         // =========================
         if (line.startsWith("@video(") && line.endsWith(")")) {
             const src = line.slice(7, -1);
-            html += `<video controls src="${src}"></video>`;
+            html += `<video controls src="videos/${src}"></video>`;
             continue;
         }
 

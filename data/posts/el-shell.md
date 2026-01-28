@@ -6,3 +6,6 @@ Los `shells` incorporan un **lenguaje de programación** que permite **controlar
 El shell ofrece un método para comunicarse con el sistema operativo de dos formas:  
 de manera **interactiva**, donde los comandos ingresados por teclado se ejecutan inmediatamente, o mediante **scripts de shell**.  
 Un script de shell es una **secuencia de comandos del shell y del sistema operativo** almacenados en un archivo, que se ejecutan de forma automática y ordenada.
+
+
+

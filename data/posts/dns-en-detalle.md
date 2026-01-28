@@ -9,11 +9,8 @@ Sin embargo, al crecer la red hasta abarcar cientos de redes y miles de equipos,
 
 Para resolver estos problemas, se diseñó el DNS (Domain Name System), un sistema distribuido y jerárquico que desde entonces constituye una pieza fundamental en el funcionamiento de Internet.
 
-## Proceso de resolución de nombres y jerarquia
+## Proceso de resolución de nombres
 La idea central del DNS es la introducción de un esquema jerárquico de nombres basado en dominios, junto con un sistema de base de datos distribuido encargado de implementar y mantener dicho esquema. Si bien el uso más común del DNS es asociar nombres de host con direcciones IP, el sistema también puede utilizarse para otros propósitos, como la localización de servidores de correo o la publicación de distintos tipos de información relacionada con un dominio.
-
-![[DNS_arbol_jerarquia.png]]
-> Solo los TLD existen como categoría formal. Todo lo demás son dominios delegados dentro de ese espacio.
 
 El funcionamiento y la estructura básica del DNS están definidos principalmente en los [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034), [RFC-1035](https://datatracker.ietf.org/doc/html/rfc1035), [RFC-2181](https://datatracker.ietf.org/doc/html/rfc2181) y se elabora con mas detalle en muchos otros.
 
@@ -61,5 +58,34 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
+
+
+## Jerarquía del DNS
+
+En Internet, el nivel superior de la jerarquía de nombres está coordinado por la `ICANN` (Internet Corporation for Assigned Names and Numbers), organización creada en 1998 como parte del proceso de maduración de Internet. Desde un punto de vista conceptual, el espacio de nombres se divide en Dominios de Nivel Superior (TLD, Top-Level Domains), de los cuales existen actualmente más de 250.
+
+Cada TLD constituye la raíz de un subárbol propio y puede delegar la administración de porciones de ese espacio en dominios de niveles inferiores. A su vez, esos dominios pueden volver a delegar subdominios, y así sucesivamente. El resultado es una estructura estrictamente jerárquica que puede representarse como un árbol invertido, donde la raíz es el dominio vacío (la raíz DNS) y las hojas corresponden a dominios finales u hosts.
+
+![[DNS_arbol_jerarquia.png]]
+
+Desde el punto de vista formal, solo los TLD existen como categorías definidas a nivel global. Todo lo que se encuentra por debajo son dominios delegados dentro del espacio de nombres de un TLD.
+
+Los TLD suelen agruparse, de manera práctica, en dos grandes categorías:
+Dominios genéricos (gTLD), como .com, .org, .net, .edu, entre otros y Dominios geográficos o de país (ccTLD), identificados por códigos de dos letras según la norma ISO 3166, como .ar, .br, .uk o .de.
+
+En general, obtener un dominio de segundo nivel dentro de un gTLD es un proceso sencillo. Por ejemplo, para registrar `companiadepepito.com`, el solicitante debe recurrir a un registrador acreditado por la ICANN que opere sobre el TLD .com. Si el nombre deseado se encuentra disponible y no infringe derechos previos (como marcas registradas), basta con abonar una cuota periódica para adquirir el derecho de uso del dominio.
+
+Cada dominio se nombra siguiendo la ruta desde ese nodo hasta la raíz del árbol. Los distintos componentes del nombre se separan mediante puntos. Por ejemplo, el `foro` de la comunidad **remoteexecution** podría denominarse `foro.remoteexecution.org` sin entrar en conflicto con un dominio como `foro.xsec.sh`, perteneciente a una comunidad distinta. El contexto jerárquico elimina ambigüedades incluso cuando se reutilizan los mismos nombres en diferentes ramas del árbol.
+
+Los nombres de dominio pueden ser absolutos o relativos. Un nombre absoluto termina siempre con un punto (.), que representa explícitamente la raíz del DNS; por ejemplo: `google.com.`;En cambio, un nombre relativo no incluye ese punto final y debe interpretarse dentro de un contexto determinado para resolverse de manera unívoca. En ambos casos, un nombre de dominio hace referencia a un nodo específico del árbol y, por extensión, a todos los nodos que cuelgan por debajo de él.
+
+El sistema de nombres de dominio no distingue entre mayúsculas y minúsculas, por lo que .edu, .EdU y .EDU son equivalentes. Cada componente individual del nombre puede tener hasta 63 caracteres de longitud, y la longitud total del nombre completo, incluyendo los puntos separadores, no debe exceder los 255 caracteres.
+
+
+
+
+
+
+
 
 
