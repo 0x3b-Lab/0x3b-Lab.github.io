@@ -72,12 +72,30 @@
     "file": "data/posts/el-shell.md"
   },  
   {
-    "id": "testing",
-    "title": "Testing Title",
-    "description": "Testing Descr.",
+    "id": "herramienta-dig",
+    "title": "Herramienta DIG",
+    "description": "Comprende cómo funciona la herramienta DIG para resolver nombres de dominio.",
+    "author": "0x3B",
+    "date": "2025-01-29",
+    "image": "images/logo.png",
+    "file": "data/posts/herramienta-dig.md"
+  },  
+  {
+    "id": "ley-de-ohm",
+    "title": "Ley de Ohm",
+    "description": "ley de Ohm y su aplicación en circuitos eléctricos.",
     "author": "0x3B",
     "date": "2025-01-15",
     "image": "images/logo.png",
-    "file": "data/posts/nota-de-pruebas.md"
+    "file": "data/posts/ley-de-ohm.md"
+  },  
+  {
+    "id": "leyes-de-kirchhoff",
+    "title": "Leyes de Kirchhoff",
+    "description": "Leyes de Kirchhoff para el análisis de circuitos eléctricos.",
+    "author": "0x3B",
+    "date": "2025-01-15",
+    "image": "images/logo.png",
+    "file": "data/posts/leyes-de-kirchhoff.md"
   }
 ]

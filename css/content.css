@@ -1,41 +1,49 @@
 /* =========================
-   MARKDOWN CONTENT
+   POST CONTENT BASE
 ========================= */
 
 #post-content {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 1.5rem;
+    font-size: 1rem;
     line-height: 1.75;
     color: #e6e6e6;
-    font-size: 1rem;
 }
 
 /* =========================
    HEADERS
 ========================= */
 
-#post-content h2 {
-    font-size: 2rem;
-    margin: 3rem 0 1.5rem;
+#post-content h2,
+#post-content h3,
+#post-content h4 {
+    margin: 1rem 0 1.5rem;
     font-weight: 700;
     border-left: 4px solid #ff003c;
     padding-left: 1rem;
 }
 
+#post-content h2 {
+    font-size: 2.2rem;
+}
+
 #post-content h3 {
+    font-size: 1.6rem;
+    opacity: 0.9;
+}
+
+#post-content h4 {
     font-size: 1.2rem;
-    margin: 3rem 0 1.5rem;
-    font-weight: 700;
-    border-left: 4px solid #ff003c;
-    padding-left: 1rem;}
+}
 
 /* =========================
    PARAGRAPHS
 ========================= */
 
 #post-content p {
-    margin: 0rem 0;
+    margin: 0.6rem 0;
+    color: #d0d0d0;
 }
 
 /* =========================
@@ -60,16 +68,16 @@
     background: #0b0b0b;
     border: 1px solid #2b2b2b;
     padding: 1.2rem;
-    overflow-x: auto;
     margin: 2rem 0;
-    border-radius: 6px;
+    border-radius: 8px;
+    overflow-x: auto;
 }
 
 #post-content pre code {
     background: none;
     border: none;
     padding: 0;
-    color: #dcdcdc;
+    color: #e6e6e6;
     font-size: 0.9rem;
 }
 
@@ -81,8 +89,8 @@
     margin: 2rem 0;
     padding: 1rem 1.5rem;
     background: #101010;
-    border-left: 4px solid #666;
-    color: #bbbbbb;
+    border-left: 4px solid #ff003c;
+    color: #aaa;
     font-style: italic;
 }
 
@@ -145,126 +153,4 @@
     border-radius: 6px;
     border: 1px solid #2b2b2b;
     background: #000;
-}
-
-
-/* =========================
-   POST CONTENT BASE
-========================= */
-
-#post-content {
-    max-width: 960px;
-    margin: 0 auto;
-
-    font-size: 1rem;
-    line-height: 1.7;
-}
-
-/* =========================
-   HEADERS
-========================= */
-
-#post-content h2 {
-    font-size: 2.2rem;
-    margin: 2.5rem 0 1.2rem;
-}
-
-#post-content h3 {
-    font-size: 1.6rem;
-    margin: 2rem 0 1rem;
-    opacity: 0.9;
-}
-
-/* =========================
-   PARAGRAPHS
-========================= */
-
-#post-content p {
-    margin: 0.6rem 0;
-    color: #d0d0d0;
-}
-
-/* =========================
-   BLOCKQUOTE
-========================= */
-
-#post-content blockquote {
-    margin: 1.5rem 0;
-    padding-left: 1rem;
-    border-left: 3px solid #ff003c;
-    color: #aaa;
-    font-style: italic;
-}
-
-/* =========================
-   CODE
-========================= */
-
-#post-content code {
-    background: #111;
-    padding: 0.15rem 0.4rem;
-    border-radius: 4px;
-    font-size: 0.9em;
-    color: #ffcc66;
-}
-
-#post-content pre {
-    background: #0d0d0d;
-    padding: 1.2rem;
-    border-radius: 8px;
-    overflow-x: auto;
-    margin: 1.5rem 0;
-}
-
-#post-content pre code {
-    background: none;
-    padding: 0;
-    color: #e6e6e6;
-}
-
-/* =========================
-   LISTS
-========================= */
-
-#post-content ul,
-#post-content ol {
-    margin: 1rem 0 1rem 1.5rem;
-}
-
-#post-content li {
-    margin: 0.4rem 0;
-}
-
-/* =========================
-   HR
-========================= */
-
-#post-content hr {
-    border: none;
-    height: 1px;
-    background: #222;
-    margin: 3rem 0;
-}
-
-/* =========================
-   LINKS
-========================= */
-
-#post-content a {
-    color: #ff003c;
-    text-decoration: none;
-}
-
-#post-content a:hover {
-    text-decoration: underline;
-}
-
-/* =========================
-   IMAGES
-========================= */
-
-#post-content img {
-    max-width: 100%;
-    border-radius: 6px;
-    margin: 1.5rem 0;
 }

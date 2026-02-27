@@ -69,6 +69,19 @@ export default function parseMarkdown(md) {
         // =========================
         // HEADERS
         // =========================
+
+        if (line.startsWith("#### ")) {
+            closeLists();
+            html += `<h5>${line.slice(5)}</h5>`;
+            continue;
+        }
+
+        if (line.startsWith("### ")) {
+            closeLists();
+            html += `<h4>${line.slice(4)}</h4>`;
+            continue;
+        }
+
         if (line.startsWith("## ")) {
             closeLists();
             html += `<h3>${line.slice(3)}</h3>`;
