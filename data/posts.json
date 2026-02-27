@@ -97,5 +97,14 @@
     "date": "2025-01-15",
     "image": "images/logo.png",
     "file": "data/posts/leyes-de-kirchhoff.md"
+  },  
+  {
+    "id": "Test",
+    "title": "Test",
+    "description": "Test de publicación.",
+    "author": "0x3B",
+    "date": "2025-01-15",
+    "image": "images/logo.png",
+    "file": "data/posts/nota-de-pruebas.md"
   }
 ]
