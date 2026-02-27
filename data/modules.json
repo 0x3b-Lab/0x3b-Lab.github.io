@@ -10,5 +10,14 @@
       { "id": "dns-en-detalle", "order": 3 },
       { "id": "protocolo-http-https", "order": 4 }
     ]
+  },  {
+    "id": "electroncia-basica",
+    "title": "Electrónica Básica",
+    "image": "",
+    "description": "Conceptos esenciales de electrónica, circuitos y componentes.",
+    "posts": [
+      { "id": "ley-de-ohm", "order": 1 },
+      { "id": "leyes-de-kirchhoff", "order": 2 }
+    ]
   }
 ]
